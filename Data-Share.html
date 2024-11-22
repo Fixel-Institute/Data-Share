@@ -342,14 +342,26 @@
 
 <style>
 .cell-output-display {
-    height: 55vh;
-    width: 100vw;
-    overflow: hidden;
-}    justify-content: center;
-    align-items: center;
+    display: flex;  /* Use flexbox for alignment */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    height: 100vh;  /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden;  /* Hide any overflow */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    background-color: transparent; /* Transparent background */
+}
+iframe {
+    height: 80vh;  /* Adjusts the iframe height to 80% of the viewport height */
+    width: 80vw;  /* Adjusts the iframe width to 80% of the viewport width */
+    border: none; /* Remove iframe border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
 }
 </style>
-<iframe height="100%" width="45%" src="https://visualization.jcagle.solutions/view/Data-Share/S0103_ACC_Poor_Responder.json" title="Poor Responder"></iframe>
+<div class="cell-output-display">
+    <iframe src="https://visualization.jcagle.solutions/view/Data-Share/S0103_ACC_Poor_Responder.json" title="Poor Responder"></iframe>
+</div>
 </div>
 </div>
 </section>
